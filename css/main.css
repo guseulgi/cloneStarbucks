@@ -25,12 +25,19 @@ img {
 }
 .inner {
   width: 1100px;
-  height: 120px;
   margin: 0 auto;
-  /* background-color: lemonchiffon; */
   position: relative;
 }
-
+.btn {
+  display: inline-block;
+  padding: 6px 20px;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.strong {
+  font-weight: 600;
+}
 header {
   background-color: #f6f5ef;
   position: fixed;
@@ -39,6 +46,9 @@ header {
   border-top: 2px solid black;
   border-bottom: 1px solid #eae7e2;
   z-index: 1;
+}
+header > .inner {
+  height: 120px;
 }
 
 header .inner a.logo {
@@ -141,20 +151,291 @@ header .inner .main-menu li.item:hover .item__name {
   color: #669900;
 }
 
-header .inner .main-menu li.item .item__contents {
+header .main-menu li.item .item__contents {
   display: none;
-
-  background-color: #2c2a29;
+  /* transform: scaleY(0);
+  transform-origin: center top;
+  transition: transform 0.4s; */
   width: 100%;
-  height: 100px;
-
   position: fixed;
   left: 0;
   top:120px;
 }
-header .inner .main-menu li.item:hover .item__contents {
+header .main-menu li.item:hover .item__contents {
+  /* transform: scale(1); */
   display: block;
 }
-header .inner .main-menu li.item .item__contents .item__contents__menu {
-  
+header .main-menu li.item .item__contents .item__contents__menu {
+  padding: 20px 0;
+  background-color: #2c2a29;
+}
+header .main-menu li.item .item__contents .item__contents__menu > .inner {
+  display: flex;
+}
+header .main-menu li.item .item__contents .item__contents__menu .inner > li {
+  width: 200px;
+  padding-right: 20px;
+}
+header .main-menu li.item .item__contents .item__contents__menu .inner > li > a {
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 15px;
+}
+header .main-menu li.item .item__contents .item__contents__menu .inner > li > a:hover {
+  text-decoration: underline;
+}
+header .main-menu li.item .item__contents .item__contents__menu .inner > li > ul {}
+header .main-menu li.item .item__contents .item__contents__menu .inner > li > ul > li {
+  color: #999;
+  font-size: 12px;
+  margin: 5px 0;
+}
+header .main-menu li.item .item__contents .item__contents__menu .inner > li > ul > li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Badges */
+header .badges {
+  position: absolute;
+  top : 150px;
+  left: calc(1100px + (100vw - 1100px) / 2);
+}
+header .badges .badge {
+  cursor: pointer;
+}
+header .badges .badge img {
+  width: 140px;
+}
+@media screen and (max-width : 1400px) {
+  header .badges {
+    left: calc(100vw - 150px);
+  }
+}
+
+/* Visual */
+section.visual {
+  position: relative;
+  margin-top: 120px;
+  background-image: url("../images/visual_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 106% 100%;
+}
+section.visual .inner {
+  position: relative;
+  height: 646px;
+}
+section.visual .inner .slogan {
+  position: absolute;
+  width: 340px;
+  top:180px;
+  left: -130px;
+  display: flex;  
+  flex-wrap: wrap;
+  justify-content: center;
+}
+section.visual .inner .slogan img {
+  width: 340px;
+}
+section.visual .inner .slogan .btn {
+  display: block;
+  margin-top: 60px;
+}
+
+section.visual .inner > img {
+  position: absolute;
+}
+section.visual .inner img:nth-child(2) {
+  width: 290px;
+  top:120px;
+  left: 340px;
+}
+section.visual .inner img:nth-child(3) {
+  width: 310px;
+  top: 208px;
+  left: 538px;
+}
+section.visual .inner img:last-child {
+  width: 310px;
+  top:162px;
+  left: 762px;
+}
+
+.btn--light-green {
+  color: #076443;
+  border-color: #076443;
+  transition: 0.6s;
+}
+.btn--light-green:hover {
+  background-color: #076443;
+  border-color: black;
+  color: white;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Notice */
+section.notice {
+  position: relative;
+}
+section.notice .notice-line {
+  position: relative;
+
+}
+
+section.notice .notice-line .bg-left {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background-color: #111;
+}
+section.notice .notice-line .bg-right {
+  position: absolute;
+  top:0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background-color: #f6f5ef;
+}
+section.notice .notice-line .inner {
+  display: flex;
+  height: 62px;
+}
+
+section.notice .notice-line .inner .inner__left {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 60%;
+  height: 100%;
+  background-color: #111;
+  color: white;
+}
+section.notice .notice-line .inner .inner__left h1 {
+  position: absolute;
+  left: 0;
+  font-weight: 600;
+  font-size: 16px;
+}
+section.notice .notice-line .inner .inner__left div {
+  position: absolute;
+  left: 85px;
+  font-size: 14px;
+}
+section.notice .notice-line .inner .inner__left a {
+  position: absolute;
+  right: 20px;
+  color: white;
+}
+section.notice .notice-line .inner .inner__left a span{
+  /* display: block; span 태그는 인라인이므로 vertical-align으로 베이스라인 없애주기. block 해도 됨 */
+  vertical-align:bottom;
+  font-size: 36px;
+}
+
+section.notice .notice-line .inner .inner__right {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 60%;
+  height: 100%;
+  background-color: #f6f5ef;
+}
+section.notice .notice-line .inner .inner__right h1 {
+  position: absolute;
+  right : 120px;
+  font-weight: 600;
+  font-size: 16px;
+}
+section.notice .notice-line .inner .inner__right a {
+  position: absolute;
+  right: 20px;
+  color: #111;
+}
+section.notice .notice-line .inner .inner__right a span{
+  display: block;
+  font-size: 36px;
+}
+
+/* Rewards */
+section.rewards {
+  position: relative;
+  background-color: #1e3932;
+}
+section.rewards .inner {
+  position: relative;
+  display: flex;
+  padding: 30px 0 40px 0;
+
+}
+section.rewards .inner .rewards__logo {
+  display: flex;
+  flex-basis: 260px;
+  justify-content: center;
+}
+section.rewards .inner .rewards__logo img {
+  display: block;
+  width: 176px;
+}
+
+section.rewards .inner .rewards__items {
+
+  color: white;
+  flex-grow: 1;
+}
+section.rewards .inner .rewards__items__register {
+  position: relative;
+  padding-bottom: 12px;
+  box-shadow: 0 0.5px #c8c8c8;
+}
+section.rewards .inner .rewards__items__register p.subject {
+  font-size: 26px;
+}
+section.rewards .inner .rewards__items__register p {
+  display: block;
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+section.rewards .inner .rewards__items__register .buttons {
+  display: flex;
+  bottom:12px;
+}
+
+section.rewards .inner .buttons {
+  right: 0;
+  position: absolute;
+}
+
+section.rewards .inner .rewards__items__register .buttons .btn--register {
+  background-color: #00704a;
+  border-color: #00704a;
+  color: white;
+  margin-right: 12px;
+}
+
+section.rewards .inner .buttons .btn--login {
+  color: white;
+}
+section.rewards .inner .rewards__items__register .buttons .btn--register:hover, section.rewards .inner .buttons .btn--login:hover {
+  text-decoration: underline;
+}
+
+section.rewards .inner .rewards__items__card {
+  display: flex;
+  position: relative;
+}
+section.rewards .inner .rewards__items__card p {
+  margin-top: 20px;
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+section.rewards .inner .rewards__items__card .buttons {
+  bottom:0;
 }
