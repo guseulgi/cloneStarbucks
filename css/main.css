@@ -777,3 +777,104 @@ section.find-store:active .inner .find-store__contents > .btn {
 }
 
 /* Footer */
+footer {
+  position: relative;
+  background-color: #2C2A29;
+}
+footer > .inner {
+  padding: 30px 0;
+}
+/* Footer menu */
+footer .footer__menu {
+  display: flex;
+}
+footer .footer__menu .left {
+  width: 90%;
+}
+footer .footer__menu .left .menu {
+  display: flex;
+}
+footer .footer__menu .left .menu > li {
+  width: 20%;
+  color: white;
+}
+footer .footer__menu .left .menu > li > ul {}
+footer .footer__menu .left .menu > li > ul > a {
+  font-size: 14px;
+  color: white;
+  display: block;
+  margin: 10px 0;
+}
+footer .footer__menu .left .menu > li > ul > a:hover,
+footer .footer__menu .left .menu > li > ul > li:hover {
+  text-decoration: underline;
+}
+footer .footer__menu .left .menu > li > ul > li {
+  font-size: 12px;
+  cursor: pointer;
+  padding: 5px 0;
+}
+footer .footer__menu .right {
+  width: 10%;
+}
+footer .footer__menu .right > img {
+  /* display: block;
+  width: 14px;
+  margin: 0 0 0 auto; */
+  float: right;
+}
+/* Footer Sub menu */
+footer .footer__sub-menu {
+  padding: 40px 50px 10px;
+}
+footer .footer__sub-menu > ul {
+  display: flex;
+  /* justify-content: space-between; */
+}
+footer .footer__sub-menu > ul > li {
+  font-size: 12px;
+  color: #ccc;
+  flex-grow: 1;
+}
+footer .footer__sub-menu > ul > li:not(.contour) {
+  cursor: pointer;
+}
+footer .footer__sub-menu > ul > li:not(.contour):hover {
+  text-decoration: underline;
+}
+footer .footer__sub-menu > ul > li:first-child {
+  color: #00b050;
+  font-weight: 800;
+}
+footer .footer__sub-menu > ul > li.contour {
+  display: block;
+  width: 3px;
+  height: 16px;
+  color: #999;
+}
+
+/* Footer Button */
+footer .footer__buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  /* 인라인의 경우 -> 중앙 정렬하기
+  text-align : center;
+  */
+}
+footer .footer__buttons > a {
+  margin: 0 2px;
+  font-size: 12px;
+}
+
+/* Footer copylight */
+footer .footer__copylight {
+  text-align: center;
+  padding-bottom: 20px;
+}
+footer .footer__copylight > p {
+  color: #999;
+  font-size: 12px;
+  line-height: 1.5rem;
+}
