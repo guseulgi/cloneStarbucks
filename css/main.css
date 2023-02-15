@@ -114,9 +114,14 @@ header .inner .sub-menu .search > input {
   outline: none;
   transition: width 0.4s;
 }
+
 header .inner .sub-menu .search > input:focus {
   width: 182px; 
 }
+
+/* header .inner .sub-menu .search > input.active {
+  width: 182px; 
+} */
 header .inner .sub-menu .search > span {
   position: absolute;
   display: inline-block;
