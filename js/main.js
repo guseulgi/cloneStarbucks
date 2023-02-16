@@ -15,7 +15,7 @@ document.addEventListener('click', function(e) {
   }
 });
 
-searchInputEl.addEventListener('click', function() {
+searchIcon.addEventListener('click', function() {
   if(searchEl.classList.contains('active') === false) {
     searchEl.classList.add('active');
     searchInputEl.focus();
@@ -29,15 +29,10 @@ searchInputEl.addEventListener('click', function() {
   }
 });
 
-// searchEl.addEventListener('click', function() {
-//   searchInputEl.focus();
-// });
-// searchInputEl.addEventListener('focus', function() {
-//   searchInputEl.placeholder = '통합검색';
-// }); //포커스 됐을 때
 searchInputEl.addEventListener('blur', function() {
   searchInputEl.placeholder = '';
-}); //포커스 없어질 때
+  isNotSearchClick = false;
+});
 
 // Swiper
 // Swiper Notice

@@ -119,7 +119,7 @@ header .inner .sub-menu .search > input {
   width: 182px; 
 } */
 
-header .inner .sub-menu .search > input .active:focus {
+header .inner .sub-menu .search.active > input {
   width: 182px; 
 }
 
